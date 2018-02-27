@@ -28,7 +28,6 @@ Example reports: [Reports](https://stattarget.github.io/docs/demo/)
     
     biocLite(c("randomForest", "plyr", "pdist", "ROC", "rrcov", "pls", "impute"))
     
-    library(RGtk2)
     
     # Install devtools
     
@@ -36,13 +35,14 @@ Example reports: [Reports](https://stattarget.github.io/docs/demo/)
     
     library(devtools)
     
+    
     # Install statTarget 2.0
     
     devtools::install_github("statTarget/statTarget2")
     
     library(statTarget)  ## `Load statTarget`
     
-    statTargetGUI()  ## `Execute statTarget GUI` 
+    
     
 > IMPORTANCE: for mac PC,  XQuartz instead of X11 support should be installed. Download it from https://www.xquartz.org. R 3.3.0 and RGtk2 2.20.31 are recommended.
 

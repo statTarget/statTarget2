@@ -3,7 +3,7 @@
 For details see https://stattarget.github.io/docs/
 
 
-Package vignettes: [Vignettes](https://stattarget.github.io/docs/my-new-doc/)
+Package vignettes: [Vignettes](https://stattarget.github.io/docs/my-new-doc/) and Reference manual: [manual](https://github.com/13479776/Picture/blob/master/statTarget-manual.pdf)
 
 
 Demo data: [Data](https://stattarget.github.io/docs/demo/)
@@ -29,7 +29,6 @@ Example reports: [Reports](https://stattarget.github.io/docs/demo/)
     biocLite(c("randomForest", "plyr", "pdist", "ROC", "rrcov", "pls", "impute"))
     
    
-    
     # Install devtools
     
     install.packages("devtools")

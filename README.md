@@ -3,7 +3,10 @@
 For details see https://stattarget.github.io/docs/
 
 
-Package vignettes: [Vignettes](https://stattarget.github.io/docs/my-new-doc/) and Reference manual: [manual](https://github.com/13479776/Picture/blob/master/statTarget-manual.pdf)
+Package vignettes: [Vignettes](https://stattarget.github.io/docs/my-new-doc/) 
+
+
+Reference manual: [Manual](https://github.com/13479776/Picture/blob/master/statTarget-manual.pdf)
 
 
 Demo data: [Data](https://stattarget.github.io/docs/demo/)

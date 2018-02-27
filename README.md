@@ -1,4 +1,4 @@
-# statTarget 2.0  (Coming Soon...)
+# statTarget 2.0
 
 For details see https://stattarget.github.io/docs/
 
@@ -18,7 +18,7 @@ Example reports: [Reports](https://stattarget.github.io/docs/demo/)
 
 > If you did not install the R software yet,you can download R >= 3.3.0  from https://www.r-project.org
 
-### Installation
+### Opening the GUI
 --------------------------------------------------------------------
 > Install the latest version of "statTarget 2.0" at Github. copy this code into R
     
@@ -28,6 +28,7 @@ Example reports: [Reports](https://stattarget.github.io/docs/demo/)
     
     biocLite(c("randomForest", "plyr", "pdist", "ROC", "rrcov", "pls", "impute"))
     
+   
     
     # Install devtools
     

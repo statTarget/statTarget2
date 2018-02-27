@@ -1,4 +1,4 @@
-# statTarget 2.0
+# statTarget 2.0  (Coming Soon...)
 
 For details see https://stattarget.github.io/docs/
 
@@ -18,7 +18,7 @@ Example reports: [Reports](https://stattarget.github.io/docs/demo/)
 
 > If you did not install the R software yet,you can download R >= 3.3.0  from https://www.r-project.org
 
-### Installation (Coming Soon...)
+### Installation
 --------------------------------------------------------------------
 > Install the latest version of "statTarget 2.0" at Github. copy this code into R
     

@@ -1,4 +1,4 @@
-# statTarget 2.0 (Coming soon)
+# statTarget 2.0
 
 For details see https://stattarget.github.io/docs/
 

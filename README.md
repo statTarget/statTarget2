@@ -1,4 +1,4 @@
-# statTarget 2.0
+# statTarget 
 
 For details see https://stattarget.github.io/docs/
 
@@ -28,7 +28,7 @@ Download link: [Source package](https://github.com/13479776/Picture/raw/master/s
 
 ### Installation
 --------------------------------------------------------------------
-> Install the latest version of "statTarget 2.0" at Github. copy this code into R
+> Install the latest version of "statTarget" at Github. copy this code into R
     
     # Install package dependencies
     
@@ -42,7 +42,7 @@ Download link: [Source package](https://github.com/13479776/Picture/raw/master/s
     
     library(devtools)
     
-    # Install statTarget 2.0
+    # Install statTarget
     
     devtools::install_github("statTarget/statTarget2")
     

@@ -50,7 +50,7 @@ Download link: [Source package](https://github.com/13479776/Picture/raw/master/s
     
     
     
-> IMPORTANCE: for mac PC,  XQuartz instead of X11 support should be installed. Download it from https://www.xquartz.org. R 3.3.0 and RGtk2 2.20.31 are recommended.
+> IMPORTANCE: for mac PC,  XQuartz instead of X11 support should be installed. Download it from https://www.xquartz.org. `The R 3.3.0 and RGtk2 2.20.31 sailed through the test.` 
 
 
 > RGTK2 is a binding for R to the GTK2 library and dependent libraries, and a multi-platform package for creating graphical user interfaces. If you have any problems about RGTK2 installation, see the related installation information for R and GTK on Windows/Mac OS at https://gist.github.com/sebkopf/9405675

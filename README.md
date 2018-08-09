@@ -17,6 +17,16 @@ Example reports: [Reports](https://stattarget.github.io/docs/demo/)
 
 Download link: [Binary package - statTarget_2.0.0.zip](https://github.com/13479776/Picture/raw/master/statTarget_2.0.0.zip)
 
+### Citation
+--------------------------------------------------------------------
+
+> Please cite the following article when using statTarget or QC-RFSC algorithm:
+ 
+ Luan H., Ji F., Chen Y., Cai Z. (2018) statTarget: A streamlined tool for signal drift correction and interpretations of quantitative mass spectrometry-based omics data. Analytica Chimica Acta. dio: https://doi.org/10.1016/j.aca.2018.08.002
+ 
+ Luan H., Ji F., Chen Y., Cai Z. (2018) Quality control-based signal drift correction and interpretations of metabolomics/proteomics data using random forest regression. bioRxiv 253583; doi: https://doi.org/10.1101/253583
+
+
 ### System requirements
 --------------------------------------------------------------------
 

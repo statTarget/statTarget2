@@ -42,7 +42,7 @@ Binary Package: [statTarget2_WindowsOnly.zip](https://github.com/13479776/Pictur
     
     Updating, Coming Back Soon! 
    
-    Binary Package: [statTarget2_WindowsOnly.zip](https://github.com/13479776/Picture/raw/master/statTarget_2.0.0.zip)
+    Binary Package for Windows PC is provided. If you want the source code, please contact us. Thanks.
 
 
     

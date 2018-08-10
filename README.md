@@ -15,6 +15,9 @@ Demo data: [Data](https://stattarget.github.io/docs/demo/)
 Example reports: [Reports](https://stattarget.github.io/docs/demo/)
 
 
+Binary Package: [statTarget2_WindowsOnly.zip](https://github.com/13479776/Picture/raw/master/statTarget_2.0.0.zip)
+
+
 ### System requirements
 --------------------------------------------------------------------
 
@@ -25,27 +28,7 @@ Example reports: [Reports](https://stattarget.github.io/docs/demo/)
 
 ### Installation
 --------------------------------------------------------------------
-> Install the latest version of "statTarget2" at Github. copy this code into R
-    
-    # Install package dependencies
-    
-    source("https://bioconductor.org/biocLite.R") 
-    
-    biocLite(c("randomForest", "plyr", "pdist", "ROC", "rrcov", "pls", "impute"))
-    
-    # Install devtools
-    
-    install.packages("devtools")
-    
-    library(devtools)
-    
-    # Install statTarget
-    
-    devtools::install_github("statTarget/statTarget2")
-    
-    library(statTarget)  ## `Load statTarget`
-    
-
+     
 > Install the earlier versions of “statTarget” at the Bioconductor
 
     source("https://bioconductor.org/biocLite.R") 
@@ -53,8 +36,15 @@ Example reports: [Reports](https://stattarget.github.io/docs/demo/)
     biocLite("statTarget")
 
     library(statTarget)  ## `Load statTarget`. 
-
     
+    
+> Install the latest version of "statTarget2" at Github. copy this code into R
+    
+   Updating, Coming Back Soon! 
+   
+   Binary Package: [statTarget2_WindowsOnly.zip](https://github.com/13479776/Picture/raw/master/statTarget_2.0.0.zip)
+
+
     
 > IMPORTANCE: for mac PC,  XQuartz instead of X11 support should be installed for the Graphical User Interface (GUI). Download it from https://www.xquartz.org. 
 

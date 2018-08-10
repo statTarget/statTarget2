@@ -15,15 +15,12 @@ Demo data: [Data](https://stattarget.github.io/docs/demo/)
 Example reports: [Reports](https://stattarget.github.io/docs/demo/)
 
 
-Download link: [Source package](https://github.com/13479776/Picture/raw/master/statTarget_2.0.0.tar.gz) and [Binary package](https://github.com/13479776/Picture/raw/master/statTarget_2.0.0_win.zip)
-
 ### System requirements
 --------------------------------------------------------------------
 
 > Dependent on R (>= 3.3.0)
 
 > If you did not install the R software yet,you can download R >= 3.3.0  from https://www.r-project.org
-
 
 
 ### Installation

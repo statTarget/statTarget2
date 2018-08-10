@@ -40,9 +40,9 @@ Binary Package: [statTarget2_WindowsOnly.zip](https://github.com/13479776/Pictur
     
 > Install the latest version of "statTarget2" at Github. copy this code into R
     
-   Updating, Coming Back Soon! 
+    Updating, Coming Back Soon! 
    
-   Binary Package: [statTarget2_WindowsOnly.zip](https://github.com/13479776/Picture/raw/master/statTarget_2.0.0.zip)
+    Binary Package: [statTarget2_WindowsOnly.zip](https://github.com/13479776/Picture/raw/master/statTarget_2.0.0.zip)
 
 
     

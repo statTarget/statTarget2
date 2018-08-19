@@ -53,3 +53,12 @@ Binary Package: [statTarget2_WindowsOnly.zip](https://github.com/13479776/Pictur
 
 
 > We recommend the R 3.3.0 and RGtk2 2.20.31 for mac OS paltform. `The R 3.3.0 and RGtk2 2.20.31 sailed through the test.` If you have multiple versions of R framework installed, RSwitch  - a small GUI that allows you to switch between R versions quickly. Download it from https://r.research.att.com
+
+###  Citation
+
+ Please cite the following article when using statTarget or QC-RFSC algorithm:
+ 
+ Luan H., Ji F., Chen Y., Cai Z. (2018) statTarget: A streamlined tool for signal drift correction and interpretations of quantitative mass spectrometry-based omics data. Analytica Chimica Acta. dio: https://doi.org/10.1016/j.aca.2018.08.002
+ 
+ Luan H., Ji F., Chen Y., Cai Z. (2018) Quality control-based signal drift correction and interpretations of metabolomics/proteomics data using random forest regression. bioRxiv 253583; doi: https://doi.org/10.1101/253583
+

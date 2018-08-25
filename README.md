@@ -64,7 +64,8 @@ Binary Package: [statTarget2_WindowsOnly.zip](https://github.com/13479776/Pictur
 
 ### Download stats
 
-`r badge_download_bioc("statTarget")`
-`r badge_bioc_download("statTarget", "total", "blue")`
-`r badge_bioc_download("statTarget", "month", "blue")`
+### Download stats
+
+[![download](http://www.bioconductor.org/shields/downloads/statTarget.svg)](https://bioconductor.org/packages/stats/bioc/statTarget) [![total](https://img.shields.io/badge/downloads-64306/total-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/statTarget) [![month](https://img.shields.io/badge/downloads-2821/month-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/statTarget)
+
 

@@ -62,3 +62,9 @@ Binary Package: [statTarget2_WindowsOnly.zip](https://github.com/13479776/Pictur
  
  Luan H., Ji F., Chen Y., Cai Z. (2018) Quality control-based signal drift correction and interpretations of metabolomics/proteomics data using random forest regression. bioRxiv 253583; doi: https://doi.org/10.1101/253583
 
+### Download stats
+
+`r badge_download_bioc("statTarget")`
+`r badge_bioc_download("statTarget", "total", "blue")`
+`r badge_bioc_download("statTarget", "month", "blue")`
+

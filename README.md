@@ -61,11 +61,3 @@ Binary Package: [statTarget2_WindowsOnly.zip](https://github.com/13479776/Pictur
  Luan H., Ji F., Chen Y., Cai Z. (2018) statTarget: A streamlined tool for signal drift correction and interpretations of quantitative mass spectrometry-based omics data. Analytica Chimica Acta. dio: https://doi.org/10.1016/j.aca.2018.08.002
  
  Luan H., Ji F., Chen Y., Cai Z. (2018) Quality control-based signal drift correction and interpretations of metabolomics/proteomics data using random forest regression. bioRxiv 253583; doi: https://doi.org/10.1101/253583
-
-### Download stats
-
-### Download stats
-
-[![download](http://www.bioconductor.org/shields/downloads/statTarget.svg)](https://bioconductor.org/packages/stats/bioc/statTarget) [![total](https://img.shields.io/badge/downloads-64306/total-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/statTarget) [![month](https://img.shields.io/badge/downloads-2821/month-blue.svg?style=flat)](https://bioconductor.org/packages/stats/bioc/statTarget)
-
-

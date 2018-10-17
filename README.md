@@ -44,7 +44,7 @@ Binary Package: [statTarget2_WindowsOnly.zip](https://github.com/13479776/Pictur
 ### Installation
 --------------------------------------------------------------------
      
-> Install the earlier versions of “statTarget” at the Bioconductor
+> Install the  versions of “statTarget” at the Bioconductor
 
     source("https://bioconductor.org/biocLite.R") 
 
@@ -55,10 +55,13 @@ Binary Package: [statTarget2_WindowsOnly.zip](https://github.com/13479776/Pictur
     
 > Install the latest version of "statTarget2" at Github. copy this code into R
 
-
-    Updating, Coming Back Soon! For details see https://stattarget.github.io and Bioconductor version: Development (3.8).
-   
-    Binary Package for Windows PC is provided. If you want the source code, please contact us. Thanks.
+    library(devtools)
+    
+    devtools::install_github("statTarget/statTarget2")
+    
+    library(statTarget)
+    
+    statTargetGUI()
 
 
     

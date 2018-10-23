@@ -31,9 +31,9 @@ transX <- function(data, type) {
     # dirout.w = paste(getwd(), '/statTargetDirectory/',type, sep='') dir.create(dirout.w)
     transX <- transCode(data = data, type = type)
     write.csv(transX$PhenoFile, paste(dirout.uni, "/metaFile_", type, ".csv", sep = ""), row.names = FALSE)
-    write.csv(transX$ProfileFile, paste(dirout.uni, "/ProfileFile_", type, ".csv", sep = ""), row.names = FALSE)
-    write.csv(transX$StatFile, paste(dirout.uni, "/StatFile_", type, ".csv", sep = ""), row.names = FALSE)
-    write.csv(transX$info, paste(dirout.uni, "/SkyProtein", type, ".csv", sep = ""), row.names = FALSE)
+    write.csv(transX$ProfileFile, paste(dirout.uni, "/profileFile_", type, ".csv", sep = ""), row.names = FALSE)
+    write.csv(transX$StatFile, paste(dirout.uni, "/statFile_", type, ".csv", sep = ""), row.names = FALSE)
+    write.csv(transX$info, paste(dirout.uni, "/annotation_", type, ".csv", sep = ""), row.names = FALSE)
 
     # setwd(dirout.uni)
     cat("Note: The input files have been generated for", type, ". Filling the missing info. please!\n")
@@ -91,21 +91,30 @@ transCode <- function(data, type) {
             stop("Read-only .csv file from SKYLINE software")
         }
         datR <- utils::read.csv(data, header = TRUE, sep = ",")
+
         skyline <- function(x) {
             data <- as.data.frame(x)
             data$Area <- as.numeric(as.character(data$Area))
+            data$Replicate.Name <- as.character(data$Replicate.Name)
+            
             data[is.na(data)] <- 0
+            
             cols <- c("Precursor.Mz", "Product.Mz")
-            datanew <- apply(data[, cols], 1, paste, collapse = "_")
+            datanew <- apply(data[, cols], 1, paste, collapse = "p_d")
             temp <- data[, c("Protein.Name", "Peptide.Sequence", "Replicate.Name", "Area")]
-            datafile <- cbind(datanew, temp)
+            datafile <- as.data.frame(apply(cbind(datanew, temp),2,as.character),stringsAsFactors =FALSE)
             colnames(datafile)[1] <- "name"
             uniID <- datafile[!duplicated(datafile[, c("name")]), ]
             cat(paste("Found", nrow(uniID), "targeted transitions"), "\n")
-            resdat_temp <- plyr::daply(datafile, .(datanew, Replicate.Name), function(x) x$Area)
-            resdat <- cbind(rownames(resdat_temp), resdat_temp)
-            colnames(resdat)[1] <- "name"
-            resdatjoin <- plyr::join(uniID, as.data.frame(resdat), by = "name")
+            spd <- split(datafile,as.factor(datafile$Replicate.Name))
+            spd2 <-  lapply(spd,funM)
+            
+            for(f in 1:length(spd2)){
+              colnames(spd2[[f]])[1] <- names(spd2)[f]
+            }
+            resdata <- Reduce(function(...) merge(..., all = TRUE, by = "IonPair"), spd2)
+            colnames(resdata)[1] <- "name"
+            resdatjoin <- plyr::join(uniID, as.data.frame(resdata), by = "name")
             cat(paste("Conversion of skyline file was done !"), "\n")
             return(list(uniID = resdatjoin[, 1:3], area = resdatjoin[, -c(2, 3, 4, 5)]))
         }
@@ -156,7 +165,11 @@ transCode <- function(data, type) {
     return(dataOutput)
 }
 
-
+funM <- function(x) {
+  fun <- as.data.frame(cbind(x$Area,x$name),stringsAsFactors =FALSE)
+  colnames(fun) <- c("Aera","IonPair")
+  return(fun)
+}
 
 
 

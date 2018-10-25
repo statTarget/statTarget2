@@ -1,4 +1,7 @@
-# statTarget2
+
+![github](https://github.com/13479776/Picture/blob/master/statTarget_label2.jpg "13479776")
+# statTarget2 
+
 
 ![GitHub release](https://img.shields.io/badge/statTarget-Good-blue.svg)
 ![GitHub release](https://img.shields.io/badge/releases-v%201.11.2-yellow.svg)
@@ -44,7 +47,7 @@ Binary Package: [statTarget2_WindowsOnly.zip](https://github.com/13479776/Pictur
 ### Installation
 --------------------------------------------------------------------
      
-> Install the earlier versions of “statTarget” at the Bioconductor
+> Install the  versions of “statTarget” at the Bioconductor
 
     source("https://bioconductor.org/biocLite.R") 
 
@@ -55,10 +58,13 @@ Binary Package: [statTarget2_WindowsOnly.zip](https://github.com/13479776/Pictur
     
 > Install the latest version of "statTarget2" at Github. copy this code into R
 
-
-    Updating, Coming Back Soon! For details see https://stattarget.github.io and Bioconductor version: Development (3.8).
-   
-    Binary Package for Windows PC is provided. If you want the source code, please contact us. Thanks.
+    library(devtools)
+    
+    devtools::install_github("statTarget/statTarget2")
+    
+    library(statTarget)
+    
+    statTargetGUI()
 
 
     

@@ -1,7 +1,7 @@
 Package: statTarget
 Type: Package
 Title: Statistical Analysis of Molecular Profiles
-Version: 1.11.7
+Version: 1.11.8
 Author: Hemi Luan
 Maintainer: Hemi Luan <hemi.luan@gmail.com>
 Depends: R (>= 3.3.0)
@@ -12,7 +12,7 @@ VignetteBuilder: knitr
 Suggests: testthat, BiocStyle, knitr, rmarkdown,
         gWidgets2,gWidgets2RGtk2,RGtk2
 Description: A streamlined tool provides a graphical user interface for
-    quality control based signal drift correction, integration of
+    quality control based signal drift correction (QC-RFSC), integration of
     data from multi-batch MS-based experiments, and the
     comprehensive statistical analysis in metabolomics and proteomics.
 License: LGPL (>= 3)

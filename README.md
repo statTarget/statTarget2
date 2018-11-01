@@ -52,6 +52,8 @@ Binary Package: [statTarget2_WindowsOnly.zip](https://github.com/13479776/Pictur
     if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
     BiocManager::install("statTarget", version = "3.8") 
+    library(statTarget)
+    statTargetGUI()
  
      
 > Install the version of "statTarget2" at Github. copy this code into R

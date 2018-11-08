@@ -1,7 +1,7 @@
 
 # statTarget2 
-<p align="center">
- <img src="https://github.com/13479776/Picture/blob/master/statTarget_label_biocticker.png" height="100" title="statTarget 2.0">
+<p align="">
+ <img src="https://github.com/13479776/Picture/blob/master/statTarget_label_biocticker.png" height="200" title="statTarget 2.0">
  </p>
 
 

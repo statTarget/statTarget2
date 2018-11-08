@@ -1,7 +1,8 @@
 
-![github](https://github.com/13479776/Picture/blob/master/statTarget_label_biocticker.png "13479776")
-<img src=https://github.com/13479776/Picture/blob/master/statTarget_label_biocticker.png height="200"）
 # statTarget2 
+<p align="center">
+ <img src="https://github.com/13479776/Picture/blob/master/statTarget_label_biocticker.png" height="100" title="statTarget 2.0">
+ </p>
 
 
 ![GitHub release](https://img.shields.io/badge/statTarget-Good-blue.svg)

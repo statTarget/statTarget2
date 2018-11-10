@@ -1,6 +1,8 @@
 
-![github](https://github.com/13479776/Picture/blob/master/statTarget_label2.jpg "13479776")
 # statTarget2 
+<p align="">
+ <img src="https://github.com/13479776/Picture/blob/master/statTarget_label_biocticker.png" height="200" title="statTarget 2.0">
+ </p>
 
 
 ![GitHub release](https://img.shields.io/badge/statTarget-Good-blue.svg)
@@ -47,16 +49,16 @@ Binary Package: [statTarget2_WindowsOnly.zip](https://github.com/13479776/Pictur
 ### Installation
 --------------------------------------------------------------------
      
-> Install the  versions of “statTarget” at the Bioconductor
+> Install “statTarget2” at the Bioconductor
 
-    source("https://bioconductor.org/biocLite.R") 
-
-    biocLite("statTarget")
-
-    library(statTarget)  ## `Load statTarget`. 
-    
-    
-> Install the latest version of "statTarget2" at Github. copy this code into R
+    if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+    BiocManager::install("statTarget", version = "3.8") 
+    library(statTarget)
+    statTargetGUI()
+ 
+     
+> Install the version of "statTarget2" at Github. copy this code into R
 
     library(devtools)
     

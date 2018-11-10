@@ -216,6 +216,10 @@ statTargetGUI <- function() {
         cont = dslyout2)
     gWidgets2::tooltip(widgets$imputeM1) <- "Missing value or zero value imputation"
     
+    widgets$Plot <- gWidgets2::gcombobox(c("TRUE", "FALSE"), label = "plotQC", 
+                                             cont = dslyout2)
+    gWidgets2::tooltip(widgets$Plot) <- "Plot the intesity vs injection order of all sampels"
+    
     gWidgets2::visible(dslyout) <- TRUE
     
     # Singal correction method
@@ -261,6 +265,7 @@ statTargetGUI <- function() {
         ntree1 = as.numeric(ntree1)
         MLmethod = gWidgets2::svalue(widgets$MLmethod)
         imputeM1 = gWidgets2::svalue(widgets$imputeM1)
+        Plot = gWidgets2::svalue(widgets$Plot)
         
         # QC span check
         if (MLmethod == "QCRLSC" & as.numeric(svalue(widgets$QCspan)) > 1e-04 & as.numeric(svalue(widgets$QCspan)) < 
@@ -284,7 +289,7 @@ statTargetGUI <- function() {
         logg1$set_borderwidth(5)
         
         utils::capture.output(shiftCor(samPeno, samFile, Frule = Frule1, MLmethod = MLmethod, ntree = ntree1, 
-            QCspan = QCspan, degree = 2, imputeM = imputeM1), file = "shiftCor.log", split = TRUE, 
+            QCspan = QCspan, degree = 2, imputeM = imputeM1, plot = Plot), file = "shiftCor.log", split = TRUE, 
             append = FALSE)
         
         logtmp1 <- try(readLines(paste(getwd(), "shiftCor.log", sep = "/")), silent=TRUE)

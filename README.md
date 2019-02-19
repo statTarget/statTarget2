@@ -12,6 +12,8 @@
 ![GitHub release](https://img.shields.io/badge/downloads-9020/total-brightgreen.svg)
 
 
+A streamlined tool provides graphical user interface for quality control based signal correction (QC-RFSC, QC-RLSC, Combat), integration of metabolomics and proteomics data from multi-batch experiments, and the comprehensive statistic analysis. (URL: https://stattarget.github.io)
+
 
 For details and latest version see https://stattarget.github.io/docs/
 

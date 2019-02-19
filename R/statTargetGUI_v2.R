@@ -150,7 +150,7 @@ statTargetGUI <- function() {
     shiftco_win = gWidgets2::ggroup(horizontal = FALSE, cont = nb, label = "Signal Correction")
     stat_win = gWidgets2::ggroup(horizontal = FALSE, cont = nb, label = "Statistical Analysis")
     mix = gWidgets2::ggroup(horizontal = FALSE, cont = nb, label = "Trans-->X")
-    sb <- gWidgets2::gstatusbar("Contact Us: hemi.luan@gmail.com, Hong Kong Baptist University", container = win)
+    sb <- gWidgets2::gstatusbar("Contact Us: luanhm@sustc.edu.cn\nSouthern University of Science and Technology", container = win)
     gWidgets2::font(sb) <- list(size = 9, color = "blue")
     svalue(nb) <- 1
     
@@ -228,7 +228,8 @@ statTargetGUI <- function() {
     cslyout2 <- gformlayout(cont = cslyout)
     
     
-    widgets$MLmethod <- gWidgets2::gradio(c("QCRFSC", "QCRLSC"), selected = 1, cont = cslyout2, horizontal = FALSE)
+    widgets$MLmethod <- gWidgets2::gradio(c("QCRFSC", "QCRLSC","Combat"), 
+                                          selected = 1, cont = cslyout2, horizontal = FALSE)
     
     gWidgets2::visible(cslyout) <- TRUE
     
@@ -288,9 +289,15 @@ statTargetGUI <- function() {
         logg1 <- gWidgets2::gvbox(container = logw1)
         logg1$set_borderwidth(5)
         
+        if(MLmethod %in% c("QCRLSC","QCRFSC")) {
         utils::capture.output(shiftCor(samPeno, samFile, Frule = Frule1, MLmethod = MLmethod, ntree = ntree1, 
             QCspan = QCspan, degree = 2, imputeM = imputeM1, plot = Plot), file = "shiftCor.log", split = TRUE, 
             append = FALSE)
+        }
+        if(MLmethod %in% c("Combat")) {
+          utils::capture.output(shiftCor_dQC(samPeno,samFile, Frule = 0.8, MLmethod = "Combat"),
+                                file = "shiftCor.log", split = TRUE, append = FALSE)
+        }
         
         logtmp1 <- try(readLines(paste(getwd(), "shiftCor.log", sep = "/")), silent=TRUE)
         if ("try-error" %in% attr(logtmp1,"class")){

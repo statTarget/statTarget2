@@ -4,9 +4,8 @@
 \alias{shiftCor}
 \title{shiftCor for GUI}
 \usage{
-shiftCor(samPeno, samFile, Frule = 0.8, MLmethod = "QCRFSC",
-  ntree = 500, QCspan = 0, degree = 2, imputeM = "KNN",
-  plot = FALSE)
+shiftCor(samPeno, samFile, Frule = 0.8, MLmethod = "QCRFSC", ntree = 500,
+  QCspan = 0, degree = 2, imputeM = "KNN", plot = FALSE)
 }
 \arguments{
 \item{samPeno}{The file with the meta information including the sample name,

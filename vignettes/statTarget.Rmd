@@ -58,7 +58,7 @@ A streamlined tool provides graphical user interface for quality control based s
 ## What does statTarget offer statistically
 
 The statTarget has two basic sections. The first section 
-is Signal Correction (See the shiftCor function). It includes 'Ensemble Learning' for QC based signal correction. For example, QC-based random forest correction (QC-RFSC) and QC-based LOESS signal correction (QCRLSC). (Dunn WB., et al. 2011; Luan H., et al. 2015). The second 
+is Signal Correction (See the shiftCor function). It includes 'Ensemble Learning' for QC based signal correction. For example, QC-based random forest correction (QC-RFSC) and QC-based LOESS signal correction (QCRLSC). (Dunn WB., et al. 2011; Luan H., et al. 2015). In addition, Combat is also provided for QC free datasets. The second 
 section is Statistical Analysis (See the statAnalysis function). It provides comprehensively computational and statistical methods that are commonly applied to analyze Omics data,
 and offers multiple results for biomarker discovery. The statTargetGUI provides the simple easy to use interface for the above functions.
 
@@ -147,7 +147,7 @@ Modified n precent rule function. A variable will be kept if it has a non-zero v
 `MLmethod`
  
 
- The machine learning method for QC based signal correction. i.e. QC-RFSC, QC-RLSC.
+ The QC-based signal correction (i.e. QC-RFSC, QC-RLSC.) or QC-free methods (Combat) 
  
 
 `Ntree`
@@ -187,6 +187,9 @@ datpath <- system.file('extdata',package = 'statTarget')
 samPeno <- paste(datpath,'MTBLS79_sampleList.csv', sep='/')
 samFile <- paste(datpath,'MTBLS79.csv', sep='/')
 shiftCor(samPeno,samFile, Frule = 0.8, MLmethod = "QCRFSC", QCspan = 0,imputeM = "KNN")
+# Combat for QC-free datasets
+samPeno2 <- paste(datpath,'MTBLS79_dQC_sampleList.csv', sep='/')
+shiftCor_dQC(samPeno2,samFile, Frule = 0.8, MLmethod = "Combat")
 
 See ?shiftCor for off-line help
 ```

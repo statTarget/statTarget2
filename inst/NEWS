@@ -3,21 +3,21 @@ CHANGES IN VERSION 2.0
 
 NEW FEATURES
     
-    New GUI
+    + New GUI
     o Mouse Hover for help information
     o .log file
-    o transX function for the output file from Skyline (PRM, SRM), MZmine2 software. 
-    o plotQC for HR image output
     
-    New Signal correction
+    + New Signal correction
+    o Combat for QC-free Signal correction
     o QC-RFSC methods for metabolomics and proteomics data
     
-    New feature slection
+    
+    + New feature slection
     o Random Forest and the Permutation based variable importance measures
     o new MDSplot for Random Forest
     o P-value based importance plot
     
-    New data preprocessing 
+    + New data preprocessing 
     o PQN/SUM/none normalization
     o center/none Scaling method
 

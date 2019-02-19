@@ -1,7 +1,7 @@
 Package: statTarget
 Type: Package
 Title: Statistical Analysis of Molecular Profiles
-Version: 1.13.1
+Version: 1.13.6
 Author: Hemi Luan
 Maintainer: Hemi Luan <hemi.luan@gmail.com>
 Depends: R (>= 3.3.0)
@@ -17,8 +17,8 @@ Description: A streamlined tool provides a graphical user interface for
     comprehensive statistical analysis in metabolomics and proteomics.
 License: LGPL (>= 3)
 URL: https://stattarget.github.io
-biocViews: Metabolomics, Proteomics, Machine Learning,
-        MassSpectrometry, QualityControl, Normalization,
+biocViews: ImmunoOncology, Metabolomics, Proteomics, Machine Learning, Lipidomics,
+        MassSpectrometry, QualityControl, Normalization, QC-RFSC, QC-RLSC, ComBat,
         DifferentialExpression, BatchEffect, Visualization,
         MultipleComparison,Preprocessing, GUI, Software
 RoxygenNote: 6.1.0

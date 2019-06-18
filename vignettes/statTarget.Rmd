@@ -126,7 +126,7 @@ Download the [Reference manual](https://github.com/13479776/Picture/blob/master/
   
   (3) Batch: The analysis blocks or batches
   
-  (4) Sample name should be consistent in Meta file and Profile file
+  (4) Sample: Sample name should be consistent in Meta file and Profile file. *The QC sample name should be taged with "QC". 
   
   (See the example data)
 

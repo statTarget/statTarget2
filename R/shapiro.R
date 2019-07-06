@@ -53,6 +53,9 @@ shapiro <- function(file) {
             }
             assign(shapname, shapiro)
         }
+        rownames(shapiro) <- colnames(x.x)
+        colnames(shapiro) <- c("pvalue")
+        
         outputfile = paste("r.", ExcName(i, slink), ".csv", sep = "")
         write.csv(name, paste(dirout.r, outputfile, sep = "/"))
         outshapiro = paste("ShapiroTest.", ExcName(i, slink), ".csv", sep = "")

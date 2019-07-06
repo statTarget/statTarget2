@@ -65,6 +65,7 @@ pvalues <- function(file, fdr) {
                 if (fdr) {
                   pval.corr = matrix(p.adjust(pvalues, method = c("BH"), n = nrow(pvalues)), ncol = 1)
                   rownames(pval.corr) = colnames(x.x)
+                  colnames(pval.corr) <- c("adjusted.pvalue")
                   pvalfin = paste("Pvalues_", ExcName(i, slink), "vs", ExcName(j, slink), ".csv", 
                     sep = "")
                   assign(pvalfin, pval.corr)
@@ -75,11 +76,13 @@ pvalues <- function(file, fdr) {
                       sign = matrix(c(sign, colnames(sorted.x)[q]))
                     }
                   }
+                  #colnames(sign) <- c("adjusted.pvalue")
                   signnam = paste("Significant_Variables_", ExcName(i, slink), "vs", ExcName(j, slink), 
                     ".csv", sep = "")
                   assign(signnam, sign)
                   write.csv(sign, paste(dirout.sign, signnam, sep = ""), row.names = FALSE)
                 } else {
+                  colnames(pvalues) <- c("pvalue")
                   rownames(pvalues) = colnames(x.x)
                   pvalfin = paste("Pvalues_", ExcName(i, slink), "vs", ExcName(j, slink), ".csv", 
                     sep = "")
@@ -91,6 +94,7 @@ pvalues <- function(file, fdr) {
                       sign = matrix(c(sign, colnames(sorted.x)[q]))
                     }
                   }
+                  #colnames(sign) <- c("pvalue")
                   signnam = paste("Significant_Variables_", ExcName(i, slink), "vs", ExcName(j, slink), 
                     ".csv", sep = "")
                   assign(signnam, sign)

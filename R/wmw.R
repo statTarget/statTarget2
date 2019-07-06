@@ -41,6 +41,9 @@ wmw <- function(file) {
                   wilx.pv[q, ] <- wilcox.test(I[, q], J[, q], paired = FALSE, exact = NULL, correct = FALSE, 
                     conf.level = 0.95, alternative = "two.sided")$p.value
                 }
+                rownames(wilx.pv) <- colnames(x.x)
+                colnames(wilx.pv) <- c("pvalue")
+                
                 wmw.ij.pv = paste("WMWTest_pvalues_", ExcName(i, slink), "vs", ExcName(j, slink), 
                   ".csv", sep = "")
                 assign(wmw.ij.pv, wilx.pv)

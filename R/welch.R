@@ -43,6 +43,8 @@ welch <- function(file) {
                     we[q, ] <- t.test(I[, q], J[, q], var.equal = FALSE, conf.level = 0.95, alternative = "two.sided")$p.value
                   }
                 }
+                rownames(we) <- colnames(I)
+                colnames(we) <- c("pvalue")
                 welch.ij = paste("WelchTest_", ExcName(i, slink), "vs", ExcName(j, slink), ".csv", 
                   sep = "")
                 assign(welch.ij, we)

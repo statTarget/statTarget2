@@ -93,7 +93,8 @@ library(statTarget)
 
 statTargetGUI()
 
-#For mac PC,  the GUI function 'statTargetGUI()' need the XQuartz instead of X11 support. Download it from https://www.xquartz.org. R 3.3.0 and RGtk2 2.20.31 are recommended for RGtk2 installation.
+# For mac PC,  the GUI function 'statTargetGUI()' need the XQuartz instead of X11 support. Download it from https://www.xquartz.org. 
+# R version > 3.6.0 are recommended for statTargetGUI function. The R core team have updated the R > 3.6.0 that support the Mac OS systerm based RGtk2.
 
 ```
 

@@ -309,6 +309,8 @@ statAnalysis <- function(file, Frule = 0.8, normM = "NONE", imputeM = "KNN", glo
     }
     cat("\n", "Output Link:", getwd(), "\n")
     cat("\n", "Statistical Analysis Finished! Time: ", date(), "\n")
+    cat("\n* To cite statTarget and QC-RFSC algorithm in publications use: Luan H., Ji F., Chen Y., Cai Z., statTarget: A streamlined tool for signal drift correction and interpretations of quantitative mass spectrometry-based omics data. Anal Chim Acta. 2018, 1036, 66-72.\n")
+    
     #cat("\n", "Correction Finished! Time: ", date(), "\n")
     cat("\n", "####################################", "\n")
     cat(" # Software Version: statTarget 2.0 #", "\n")

@@ -473,6 +473,8 @@ shiftCor <- function(samPeno, samFile, Frule = 0.8, MLmethod = "QCRFSC", ntree =
     write.csv(lo_temp_all, paste(dirout.As, RSD30_CV, sep = "/"), row.names = FALSE)
     cat("\n", "Output Link:", getwd(), "\n")
     cat("\n", "Correction Finished! Time: ", date(), "\n")
+    cat("\n* To cite statTarget and QC-RFSC algorithm in publications use: Luan H., Ji F., Chen Y., Cai Z., statTarget: A streamlined tool for signal drift correction and interpretations of quantitative mass spectrometry-based omics data. Anal Chim Acta. 2018, 1036, 66-72.\n")
+    
     cat("\n", "####################################", "\n")
     cat(" # Software Version: statTarget 2.0 #", "\n")
     cat(" ####################################", "\n")

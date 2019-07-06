@@ -49,6 +49,7 @@ volcano <- function(file, upper.lim, lower.lim, sig.lim) {
                   sep = "")
                 write.csv(FC, paste(dirout.fc, fc.csvfile, sep = ""))
                 PV = read.csv(pv, header = TRUE)
+                if("pvalue" %in% colnames(PV)) adjCheck <- "pvalue" else adjCheck <- "adjust.pvalue"
                 PV = matrix(PV[, -1], ncol = 1)
                 PV[is.na(PV)] <- 1
                 logfc = log2(FC)
@@ -85,9 +86,10 @@ volcano <- function(file, upper.lim, lower.lim, sig.lim) {
                     pospv[p, ] = 4L
                   }
                 }
+                
                 pdf(V)
                 graphics::plot(logfc, logpv, col = colpv, cex = 1.2, pch = 19, cex.sub = 0.8, xlim = c(-max.fc, 
-                  max.fc), xlab = "log2 (Fold Change)", ylab = "-log10 (Pvalue)", main = paste("Volcano Plot ", 
+                  max.fc), xlab = "log2 (Fold Change)", ylab = paste("-log10(",adjCheck,")",sep = ""), main = paste("Volcano Plot ", 
                   ExcName(i, slink), "-to-", ExcName(j, slink), sep = ""), sub = paste("(Blue dot, down-regulated; red dot, up-regulated; ", 
                   "Pvalue < ", sig.lim, ", FC > ", upper.lim, " or < ", lower.lim, ")", sep = ""))
                 
@@ -118,11 +120,15 @@ volcano <- function(file, upper.lim, lower.lim, sig.lim) {
                 
                 if (length(colnames(sorted.x)[grep("navy", colpv)]) > 0 | length(colnames(sorted.x)[grep("#D55E00", 
                   colpv)]) > 0) {
+                  
                   Vol_sig = paste(dirout.vol, "VolcanoMarker_", ExcName(i, slink), "-to-", ExcName(j, 
                     slink), ".csv", sep = "")
                   dirout.name = c(rownames(voldata)[grep("navy", colpv)], rownames(voldata)[grep("#D55E00", 
                     colpv)])
-                  write.csv(dirout.name, Vol_sig)
+                  
+                  dirout.name <- as.data.frame(dirout.name)
+                  colnames(dirout.name) <- c("Diff_VolcanoMarker")
+                  write.csv(dirout.name, Vol_sig, row.names = FALSE)
                 } else {
                   NULL
                 }

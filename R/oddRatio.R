@@ -14,8 +14,10 @@ oddRatio <- function(file) {
     file = pwdfile
     x <- read.csv(file, sep = ",", header = TRUE)
     x.x = x[, 3:ncol(x)]
+    #
     rownames(x.x) = x[, 2]
     k = matrix(x[, 1], ncol = 1)
+    
     slink = paste(getwd(), "/DataPretreatment", "/slink.csv", sep = "")
     slink = read.csv(slink, header = TRUE)
     x.n = cbind(k, x.x)

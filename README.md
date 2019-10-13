@@ -63,17 +63,6 @@ Binary Package: [statTarget2_WindowsOnly.zip](https://github.com/13479776/Pictur
     library(statTarget)
     statTargetGUI()
  
-     
-> Install the version of "statTarget2" at Github. copy this code into R
-
-    library(devtools)
-    
-    devtools::install_github("statTarget/statTarget2")
-    
-    library(statTarget)
-    
-    statTargetGUI()
-
 
     
 > IMPORTANCE: for mac PC,  XQuartz instead of X11 support should be installed for the Graphical User Interface (GUI). Download it from https://www.xquartz.org. 

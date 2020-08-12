@@ -32,9 +32,6 @@ Example reports: [Reports](https://stattarget.github.io/docs/demo/)
 
 Binary Package: [statTarget2_WindowsOnly.zip](https://github.com/13479776/Picture/raw/master/statTarget_2.0.0.zip)
 
-### *****New features*****
-
-'ref.peaks' was implemented into QCRFSC for condisering the possibility of correlations of errors between features, as well as the batch effect. It is adaptable to small datasets with few quality control samples. See shiftCor function. 
 
 ###  Citation
 
@@ -47,7 +44,7 @@ Binary Package: [statTarget2_WindowsOnly.zip](https://github.com/13479776/Pictur
 ### System requirements
 --------------------------------------------------------------------
 
-> Dependent on R (>= 3.6.0)
+> Dependent on R 
 
 > If you did not install the R software yet,you can download R >= 3.6.0  from https://www.r-project.org
 
@@ -58,12 +55,26 @@ Binary Package: [statTarget2_WindowsOnly.zip](https://github.com/13479776/Pictur
 > Install “statTarget2” at the Bioconductor
 
     if (!requireNamespace("BiocManager", quietly = TRUE))
+    
     install.packages("BiocManager")
-    BiocManager::install("statTarget", version = "3.9") 
+   
+    BiocManager::install("statTarget", version = "devel") 
+   
     library(statTarget)
     statTargetGUI()
  
+> Install “statTarget2” at the Github
+   
+    if (!requireNamespace("devtools", quietly = TRUE))
 
+    install.packages("devtools")
+
+    devtools::install_github("statTarget/statTarget2")
+
+    library(statTarget)
+
+    statTargetGUI()
+    
     
 > IMPORTANCE: for mac PC,  XQuartz instead of X11 support should be installed for the Graphical User Interface (GUI). Download it from https://www.xquartz.org. 
 

@@ -45,11 +45,11 @@ shapiro <- function(file) {
         shapiro = matrix(rep(NA, ncol(n.x)))
         for (q in 1:ncol(name)) {
             notAlist = c()
-            notAlist = matrix(unlist(name[, q]))
+            notAlist = as.numeric(matrix(unlist(name[, q])))
             if (diff(range(notAlist)) == 0) {
                 shapiro[q, ] = NA
             } else {
-                shapiro[q, ] = shapiro.test(as.numeric(notAlist))$p.value
+                shapiro[q, ] = shapiro.test(notAlist)$p.value
             }
             assign(shapname, shapiro)
         }

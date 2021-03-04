@@ -68,9 +68,9 @@ statAnalysis <- function(file, Frule = 0.8, normM = "NONE", imputeM = "KNN", glo
     
     imdat <- dat[, 3:ncol(dat)]
     
-    #if (length(imdat[imdat < 0L]) > 0) {
-    #    imdat[imdat < 0L] <- 0L
-    #}
+    if (length(imdat[imdat < 0L]) > 0) {
+        imdat[imdat < 0L] <- 0L
+    }
     imdat[imdat == 0L] <- NA
     
     imdat <- cbind(dat[, 1:2], imdat)

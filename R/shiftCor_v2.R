@@ -45,14 +45,21 @@ shiftCor <- function(samPeno, samFile, Frule = 0.8, MLmethod = "QCRFSC", ntree =
     cat(" metaFile:", samPeno, "\n")
     cat(" profileFile:", samFile, "\n")
     
+    # read the data
     samPeno <- read.csv(samPeno, header = TRUE, check.names = FALSE, stringsAsFactors = FALSE)
     samPeno <- as.data.frame(samPeno)
+    # check the title
+    checkPeno <- match(c("sample", "batch",  "class",  "order" ),colnames(samPeno))
+    if(sum(is.na(checkPeno)) > 0) stop("The names in column of metaFile should be `sample`, `batch`,  `class`,  `order`")
     samPeno <- plyr::arrange(samPeno, order)
     samFile <- read.csv(samFile, header = FALSE, check.names = FALSE, stringsAsFactors = FALSE)
     samFile <- t(samFile)
     colnames(samFile) <- samFile[1, ]
     samFile <- as.data.frame(samFile[-1, ])
     rownames(samFile) <- samFile$name
+    checkPro <- match(c("name" ),colnames(samFile)[1])
+    if(sum(is.na(checkPro)) > 0) stop("The names in column of profileFile should be `name`")
+    
     
     ############## Checking the input file#############
     
@@ -474,7 +481,11 @@ shiftCor <- function(samPeno, samFile, Frule = 0.8, MLmethod = "QCRFSC", ntree =
     rownames(lo_temp_sam) <- NULL
     
     # filter 
-    lo_temp_sam_filter <- lo_temp_sam[,-cfid]
+    if(length(cfid) == 0) {
+      lo_temp_sam_filter <- lo_temp_sam
+    } else {
+      lo_temp_sam_filter <- lo_temp_sam[,-cfid]}
+    #lo_temp_sam_filter <- lo_temp_sam[,-cfid]
     
     RSD30_CV = paste("shift_sample_cor", ".csv", sep = "")
     write.csv(lo_temp_sam_filter, paste(dirout.As, RSD30_CV, sep = "/"), row.names = FALSE)
@@ -487,11 +498,16 @@ shiftCor <- function(samPeno, samFile, Frule = 0.8, MLmethod = "QCRFSC", ntree =
     
     ################# 
     RSDdist(Rsdist_sam_raw, Rsdist_sam_cor, Rsdist_QC_raw, Rsdist_QC_cor)
+    lo_temp$class[is.na(lo_temp$class)] <- "QC"
     lo_temp_all <- lo_temp[, -c(2, 4)]
     rownames(lo_temp_all) <- NULL
     
     # fitler
-    lo_temp_all_filter <- lo_temp_all[,-cfid]
+    if(length(cfid) == 0) {
+      lo_temp_all_filter <- lo_temp_all
+    } else {
+      lo_temp_all_filter <- lo_temp_all[,-cfid]}
+    #lo_temp_all_filter <- lo_temp_all[,-cfid]
     
     RSD30_CV = paste("shift_all_cor", ".csv", sep = "")
     write.csv(lo_temp_all_filter, paste(dirout.As, RSD30_CV, sep = "/"), row.names = FALSE)

@@ -1,21 +1,6 @@
+# statTarget2
 
-# statTarget2 
-<p align="">
- <img src="https://github.com/13479776/Picture/blob/master/statTarget_label_biocticker.png" height="200" title="statTarget 2.0">
- </p>
-
-
-![GitHub release](https://img.shields.io/badge/statTarget-Good-blue.svg)
-![GitHub release](https://img.shields.io/badge/releases-v%201.11.2-yellow.svg)
-![GitHub release](https://img.shields.io/badge/downloads-top%2020%25-green.svg)
-![GitHub release](https://img.shields.io/badge/Dependents-R%203.3.0%20-brightgreen.svg)
-![GitHub release](https://img.shields.io/badge/downloads-9020/total-brightgreen.svg)
-
-
-A streamlined tool provides graphical user interface for quality control based signal correction (QC-RFSC, QC-RLSC, Combat), integration of metabolomics and proteomics data from multi-batch experiments, and the comprehensive statistic analysis. (URL: https://stattarget.github.io)
-
-
-For details and latest version see https://stattarget.github.io/docs/
+For details see https://stattarget.github.io/docs/
 
 
 Package vignettes: [Vignettes](https://stattarget.github.io/docs/my-new-doc/) 
@@ -33,48 +18,34 @@ Example reports: [Reports](https://stattarget.github.io/docs/demo/)
 Binary Package: [statTarget2_WindowsOnly.zip](https://github.com/13479776/Picture/raw/master/statTarget_2.0.0.zip)
 
 
-###  Citation
-
- Please cite the following article when using statTarget or QC-RFSC algorithm:
- 
- Luan H., Ji F., Chen Y., Cai Z. (2018) statTarget: A streamlined tool for signal drift correction and interpretations of quantitative mass spectrometry-based omics data. Analytica Chimica Acta. dio: https://doi.org/10.1016/j.aca.2018.08.002
- 
- Luan H., Ji F., Chen Y., Cai Z. (2018) Quality control-based signal drift correction and interpretations of metabolomics/proteomics data using random forest regression. bioRxiv 253583; doi: https://doi.org/10.1101/253583
-
 ### System requirements
 --------------------------------------------------------------------
 
-> Dependent on R 
+> Dependent on R (>= 3.3.0)
 
-> If you did not install the R software yet,you can download R >= 3.6.0  from https://www.r-project.org
+> If you did not install the R software yet,you can download R >= 3.3.0  from https://www.r-project.org
 
 
 ### Installation
 --------------------------------------------------------------------
      
-> Install “statTarget2” at the Bioconductor
+> Install the earlier versions of “statTarget” at the Bioconductor
 
-    if (!requireNamespace("BiocManager", quietly = TRUE))
+    if (!requireNamespace("BiocManager", quietly=TRUE))
+        install.packages("BiocManager")
+
+    BiocManager::install("statTarget")
+
+    library(statTarget)  ## `Load statTarget`. 
     
-    install.packages("BiocManager")
-   
-    BiocManager::install("statTarget", version = "devel") 
-   
-    library(statTarget)
-    statTargetGUI()
- 
-> Install “statTarget2” at the Github
-   
-    if (!requireNamespace("devtools", quietly = TRUE))
-
-    install.packages("devtools")
-
-    devtools::install_github("statTarget/statTarget2")
-
-    library(statTarget)
-
-    statTargetGUI()
     
+> Install the latest version of "statTarget2" at Github. copy this code into R
+    
+    Updating, Coming Back Soon! 
+   
+    Binary Package for Windows PC is provided. If you want the source code, please contact us. Thanks.
+
+
     
 > IMPORTANCE: for mac PC,  XQuartz instead of X11 support should be installed for the Graphical User Interface (GUI). Download it from https://www.xquartz.org. 
 
@@ -82,5 +53,4 @@ Binary Package: [statTarget2_WindowsOnly.zip](https://github.com/13479776/Pictur
 > RGTK2 is a binding for R to the GTK2 library and dependent libraries, and a multi-platform package for creating graphical user interfaces. If you have any problems about RGTK2 installation, see the related installation information for R and GTK on Windows/Mac OS at https://gist.github.com/sebkopf/9405675. 
 
 
-> We recommend the R 3.6.0 and RGtk2 for mac OS paltform. `The R 3.6.0 and RGtk2 sailed through the test.` If you have multiple versions of R framework installed, RSwitch  - a small GUI that allows you to switch between R versions quickly. Download it from https://r.research.att.com
-
+> We recommend the R 3.3.0 and RGtk2 2.20.31 for mac OS paltform. `The R 3.3.0 and RGtk2 2.20.31 sailed through the test.` If you have multiple versions of R framework installed, RSwitch  - a small GUI that allows you to switch between R versions quickly. Download it from https://r.research.att.com

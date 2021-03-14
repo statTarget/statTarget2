@@ -15,9 +15,6 @@ Demo data: [Data](https://stattarget.github.io/docs/demo/)
 Example reports: [Reports](https://stattarget.github.io/docs/demo/)
 
 
-Binary Package: [statTarget2_WindowsOnly.zip](https://github.com/13479776/Picture/raw/master/statTarget_2.0.0.zip)
-
-
 ### System requirements
 --------------------------------------------------------------------
 

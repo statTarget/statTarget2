@@ -38,9 +38,10 @@ Example reports: [Reports](https://stattarget.github.io/docs/demo/)
     
 > Install the latest version of "statTarget2" at Github. copy this code into R
     
-    Updating, Coming Back Soon! 
-   
-    Binary Package for Windows PC is provided. If you want the source code, please contact us. Thanks.
+    if (!requireNamespace("BiocManager", quietly=TRUE))
+        install.packages("BiocManager")
+
+    BiocManager::install("statTarget/statTarget2")
 
 
     

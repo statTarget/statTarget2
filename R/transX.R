@@ -157,7 +157,29 @@ transCode <- function(data, type) {
 }
 
 
-
+#' @name ID2Anno
+#' @title link the targeted ID to annotation
+#' @description ID2Anno is used to link the compounds ID to annotation.
+#' @param abbrevID A data.frame file with '.csv' format including the compounds ID.
+#' 
+#' @param annotation A data.frame file with '.csv' format annotated information for ID. 
+#' The 1st column is the abbrevID.
+#' @param outName An output table with ".xls".
+#' @examples
+## Not run: 
+## ID2Anno(x,y,outName = "matchIDAnno")
+## End(Not run)
+#' @author Hemi Luan, hemi.luan@gmail.com 
+#' @export 
+ID2Anno <- function(abbrevID,annotation, outName = "matchIDAnno"){
+  # id , abbrevID
+  x <- read.csv(abbrevID,header = FALSE)
+  # id- annotationList
+  y <- read.csv(annotation,header = FALSE)
+  rownames(y) <- y[,1]
+  x <- y[x[,1],]
+  write.table(x,paste0(outName,".xls",sep= ""),sep="\t", row.names = FALSE,col.names = FALSE)
+}
 
 
 

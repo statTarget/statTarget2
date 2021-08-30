@@ -4,11 +4,26 @@
 \alias{statAnalysis}
 \title{statAnalysis for statistical analysis for omics data or others.}
 \usage{
-statAnalysis(file, Frule = 0.8, normM = "NONE", imputeM = "KNN",
-  glog = TRUE, FDR = TRUE, ntree = 500, nvarRF = 5,
-  scaling = "Pareto", plot.volcano = TRUE, save.boxplot = FALSE,
-  silt = 20, pcax = 1, pcay = 2, Labels = TRUE, upper.lim = 2,
-  lower.lim = 0.5, sig.lim = 0.05)
+statAnalysis(
+  file,
+  Frule = 0.8,
+  normM = "NONE",
+  imputeM = "KNN",
+  glog = TRUE,
+  FDR = TRUE,
+  ntree = 500,
+  nvarRF = 5,
+  scaling = "Pareto",
+  plot.volcano = TRUE,
+  save.boxplot = FALSE,
+  silt = 20,
+  pcax = 1,
+  pcay = 2,
+  Labels = TRUE,
+  upper.lim = 2,
+  lower.lim = 0.5,
+  sig.lim = 0.05
+)
 }
 \arguments{
 \item{file}{The file with the expression information.}

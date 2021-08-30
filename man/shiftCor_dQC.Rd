@@ -4,9 +4,17 @@
 \alias{shiftCor_dQC}
 \title{QC-free based signal correction}
 \usage{
-shiftCor_dQC(samPeno, samFile, Frule = 0.8, imputeM = "KNN",
-  MLmethod = "Combat", par.prior = TRUE, prior.plots = FALSE,
-  mod.covariates = FALSE, batch.Num = NULL)
+shiftCor_dQC(
+  samPeno,
+  samFile,
+  Frule = 0.8,
+  imputeM = "KNN",
+  MLmethod = "Combat",
+  par.prior = TRUE,
+  prior.plots = FALSE,
+  mod.covariates = FALSE,
+  batch.Num = NULL
+)
 }
 \arguments{
 \item{samPeno}{The file with the meta information including the sample name,

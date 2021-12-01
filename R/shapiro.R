@@ -49,7 +49,7 @@ shapiro <- function(file) {
             if (diff(range(notAlist)) == 0) {
                 shapiro[q, ] = NA
             } else {
-                shapiro[q, ] = shapiro.test(as.numeric(notAlist))$p.value
+                shapiro[q, ] = shapiro.test(notAlist)$p.value
             }
             assign(shapname, shapiro)
         }

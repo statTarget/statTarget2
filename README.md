@@ -51,4 +51,10 @@ Example reports: [Reports](https://stattarget.github.io/docs/demo/)
 > RGTK2 is a binding for R to the GTK2 library and dependent libraries, and a multi-platform package for creating graphical user interfaces. If you have any problems about RGTK2 installation, see the related installation information for R and GTK on Windows/Mac OS at https://gist.github.com/sebkopf/9405675. 
 
 
+> How to install the GTK+ manually.  
+      1. Download the GTK+ from  the web address https://iso.mirrors.ustc.edu.cn/gnome/binaries/win64/gtk+/2.22/gtk+-bundle_2.22.1-20101229_win64.zip.  
+      2. build the new concent (gtk\x64) of RGtk2 in R Library，example:   D:\Program Files\R\R-4.0.3\library\RGtk2\gtk\x64
+      3. Copy the GTK+ zipfile into the x64 files and unzip it. 
+      
+
 > We recommend the R 3.3.0 and RGtk2 2.20.31 for mac OS paltform. `The R 3.3.0 and RGtk2 2.20.31 sailed through the test.` If you have multiple versions of R framework installed, RSwitch  - a small GUI that allows you to switch between R versions quickly. Download it from https://r.research.att.com

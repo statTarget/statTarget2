@@ -2,14 +2,14 @@
 
 
 RGtk2 appears to have been retired from CRAN. To install it from the Microsoft CRAN snapshots:
+
 On Linux:
-
 > install.packages("https://cran.microsoft.com/snapshot/2021-12-15/src/contrib/RGtk2_2.20.36.2.tar.gz", repos=NULL)
+
 On Windows:
-
 > install.packages("https://cran.microsoft.com/snapshot/2021-12-15/bin/windows/contrib/4.1/RGtk2_2.20.36.2.zip", repos=NULL)
-On Mac:
 
+On Mac:
 > install.packages("https://cran.microsoft.com/snapshot/2021-12-15/bin/macosx/contrib/4.1/RGtk2_2.20.36.2.tgz", repos=NULL)
 
 

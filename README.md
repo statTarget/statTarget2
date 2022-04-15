@@ -4,7 +4,7 @@ A streamlined tool provides a graphical user interface for quality control based
 
 Author: Hemi Luan
 
-     We will relase the statTargetAPP instead of the statTarget.
+     We will release the statTargetAPP instead of the statTarget soon.
 
      If interested, you can contact via email
 

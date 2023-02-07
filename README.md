@@ -8,7 +8,7 @@ Author: Hemi Luan
 
      If interested, you can contact via email
 
-     Maintainer: Hemi Luan <luanhm at sustech.edu.cn>
+     Maintainer: Prof. Hemi Luan <hm-luan at msn.com>
 
 Citation (from within R, enter citation("statTarget")):
 

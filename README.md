@@ -1,4 +1,4 @@
-#  statTargetAPP (statTarget2)
+#  statTarget (PRO-statTarget)
 
 A streamlined tool provides a graphical user interface for quality control based signal drift correction (QC-RFSC), integration of data from multi-batch MS-based experiments, and the comprehensive statistical analysis in metabolomics and proteomics.
 
